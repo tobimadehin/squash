@@ -1,7 +1,7 @@
 import './App.scss';
 import img from "./door-story.jpg";
 
-function App() {
+const App = () => {
   return (
     <div class="nav">
         <div class="nav-left">
