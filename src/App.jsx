@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import './App.scss';
 import img from "./door-story.jpg";
+import MessageCard from './Components/MessageCard';
 
 const App = () => {
   return (
@@ -27,7 +29,13 @@ const App = () => {
             </div>  
         </div> 
         <div class="div-main">
-          
+            <MessageCard />
+
+            <div class="text-input">
+                <button class="button-message">File</button>
+                <input class="text-input-field" type="text" placeholder="Send a message..." />
+                <button class="button-message">Send</button>
+            </div>
         </div>
         <div class="nav-right">
             <div class="div-axton-members">

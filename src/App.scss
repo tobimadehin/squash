@@ -95,6 +95,25 @@ body{
     grid-row: 2/11;
     grid-column: 9/84;
     background-color: #333333;
+
+    .text-input{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        bottom: 10px;
+        width: 75%;
+
+        .text-input-field {
+            width: 98%;
+            height: 32px;
+        }
+
+        .button-message {
+            width: 60px;
+            height: 38px;
+        }
+    }
 }
 .nav-right{
     grid-row: 2/11;
