@@ -95,26 +95,63 @@ body{
     grid-row: 2/11;
     grid-column: 9/84;
     background-color: #333333;
-
+    position: relative;
+    
+    .div-text{
+        height: 89%;
+        overflow-y: auto;
+    }
     .text-input{
         display: flex;
-        flex-direction: row;
         align-items: center;
         position: absolute;
-        bottom: 10px;
-        width: 75%;
+        bottom: 2%;
+        left: 1%;
+        width: 98%;
+        margin: 0 auto;
+        background-color: #292929;
+        height: 45px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+       
+
+        .button-message-file{
+            width: 5%;
+            margin-left: 15px;
+            font-size: 23px;
+            background-color: transparent;
+            color: white;
+            outline: 0;
+            border: none;
+            
+        }
 
         .text-input-field {
-            width: 98%;
+            width: 88%;
             height: 32px;
+            background-color: transparent;
+            outline: 0;
+            border: none;
+            color: white;
         }
 
         .button-message {
-            width: 60px;
-            height: 38px;
+            padding: 5px;
+            font-size: 18px;
+            border-radius: 50%;
         }
     }
+    .div-text::-webkit-scrollbar{
+        width: 4px;   
+    }
+    
+    .div-text::-webkit-scrollbar-thumb {
+        background: #9da1a6; 
+        border-radius: 8px;
+      }
 }
+
+
 .nav-right{
     grid-row: 2/11;
     grid-column:84/101;

@@ -44,17 +44,18 @@ const App = () => {
                 </div>  
             </div> 
             <div class="div-main">
+            <div class="div-text">
                 {renderable.map(item => (
                     <MessageCard name="Wesley Fox" time={calculateTime()} message={item.text} />
                 ))}
-
+            </div>
                 <div class="text-input">
-                    <button class="button-message">File</button>
+                    <button class="button-message-file"><i class="bi bi-paperclip"></i></button>
                     <input class="text-input-field" 
                         value={message} 
                         onChange={e => setMessage(e.target.value)} 
                         type="text" 
-                        placeholder="Send a message..." />
+                        placeholder="Write something..." />
                     <button class="button-message"
                         onClick={() => {
                             setMessage("");
@@ -63,7 +64,7 @@ const App = () => {
                                 text: message
                             }, ...renderable]);
                         }} >
-                        Send
+                        <i class="bi bi-send-fill"></i>
                     </button>
                 </div>
             </div>
