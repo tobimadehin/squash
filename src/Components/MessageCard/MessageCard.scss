@@ -20,7 +20,12 @@
             flex-direction: row;
             justify-content: space-between;
             margin-left: 12px;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
+            font-size: xx-small;
+
+            .div-time {
+                margin-left: 4px;
+            }
         }
 
         .div-card-message {

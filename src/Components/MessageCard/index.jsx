@@ -8,8 +8,8 @@ const MessageCard = (props) => {
             <img src={img} alt="door-story" />
             <div class="div-text">
                 <div class="div-message-info">
-                    <div>{props.name}</div>
-                    <div>{props.time}</div>
+                    <div class="div-name">{props.name}</div>
+                    <div class="div-time">{props.time}</div>
                 </div>
                 <div class="div-card-message">
                     {props.message}

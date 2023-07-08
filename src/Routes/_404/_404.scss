@@ -1,0 +1,19 @@
+body {
+    color: white;
+    background-color: #292929;
+}
+
+.div-main-404 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25%;
+
+    .div-404 {
+        font-size: xx-large;
+        font-weight: 900;
+    }
+    .div-page-not-found {
+        font-size: large;
+    }
+}

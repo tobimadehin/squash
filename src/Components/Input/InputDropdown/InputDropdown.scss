@@ -1,0 +1,11 @@
+.div-input-dropdown {
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+
+    .input-dropdown-normal {
+        width: 99%;
+        height: 32px;
+        padding: auto;
+    }
+}
