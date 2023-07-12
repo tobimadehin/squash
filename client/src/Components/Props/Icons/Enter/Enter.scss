@@ -1,0 +1,14 @@
+.icon-enter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: #818182;
+    border-radius: 6px;
+}
+.icon-enter:hover {
+    color: var(--grey-main);
+    background-color: white;
+}

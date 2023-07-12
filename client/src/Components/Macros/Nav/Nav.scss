@@ -1,0 +1,22 @@
+.nav {
+    display: flex;
+    width: 100%;
+    height: 64px;
+    background-color: var(--grey-main);
+    justify-content: space-between;
+
+    .nav-01 {
+        background-color: red;
+        width: 360px;
+        height: 100%;
+    }
+    .nav-02 {
+        width: 100%;
+        height: 100%;
+    }
+    .nav-03 {
+        background-color: red;
+        width: 360px;
+        height: 100%;
+    }
+}
