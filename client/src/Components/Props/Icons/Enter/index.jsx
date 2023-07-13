@@ -1,10 +1,10 @@
 import React from 'react';
 import "./Enter.scss";
-import { AiOutlineEnter } from "react-icons/ai"
+import { BsArrowReturnLeft } from "react-icons/bs"
 
 const Enter = () => {
   return (
-    <div className='icon-enter'><AiOutlineEnter /></div>
+    <div className='icon-enter'><BsArrowReturnLeft /></div>
   )
 }
 

@@ -4,10 +4,13 @@
     height: 64px;
     background-color: var(--grey-main);
     justify-content: space-between;
+    border-bottom: solid 1px #ffffff35;
 
     .nav-01 {
-        background-color: red;
-        width: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 90px;
         height: 100%;
     }
     .nav-02 {
@@ -15,8 +18,10 @@
         height: 100%;
     }
     .nav-03 {
-        background-color: red;
-        width: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 90px;
         height: 100%;
     }
 }

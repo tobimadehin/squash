@@ -2,7 +2,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './Main.scss';
-import { InputText, Nav } from '../../Components';
+import { InputText, Nav, MessageCard } from '../../Components';
 
 const Main = () => {
     const [renderable, renderMessage] = useState([]);
@@ -24,6 +24,8 @@ const Main = () => {
                 <Nav /> 
             </div>
             <div className='div-chat-area'>
+                <MessageCard />
+                <MessageCard />
                 <InputText />
             </div>
         </div>
