@@ -1,0 +1,34 @@
+.div-message {
+    display: flex;
+    flex-direction: row;
+    width: 840px;
+    margin-top: 24px;
+
+    .div-profile-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .div-text {
+        color: white;
+        width: 100%;
+        height: auto;
+
+        .div-message-info {
+            display: flex;
+            flex-direction: row;
+            margin-left: 12px;
+            margin-bottom: 6px;
+            font-size: xx-small;
+
+            .div-time {
+                margin-left: 12px;
+            }
+        }
+
+        .div-card-message {
+            color: white;
+            margin-left: 12px;
+        }
+    }
+}

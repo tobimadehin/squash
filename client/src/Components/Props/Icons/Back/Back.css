@@ -1,0 +1,16 @@
+.icon-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: solid 1px #ffffff35;
+    border-radius: 40px;
+    color: white;
+    background-color: transparent;
+}
+
+.icon-back:hover {
+    color: var(--grey-main);
+    background-color: white;
+}

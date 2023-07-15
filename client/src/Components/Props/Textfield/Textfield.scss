@@ -1,0 +1,28 @@
+.textfield-transparent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+
+    .textfield-transparent-input {
+        height: 90%;
+        margin: auto 0;
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    .textfield-transparent-input::placeholder {
+        font-family: 'Work Sans', sans-serif;
+    }
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
