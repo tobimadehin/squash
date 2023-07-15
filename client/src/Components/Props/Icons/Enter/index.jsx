@@ -2,9 +2,9 @@ import React from 'react';
 import "./Enter.scss";
 import { BsArrowReturnLeft } from "react-icons/bs"
 
-const Enter = () => {
+const Enter = (props) => {
   return (
-    <div className='icon-enter'><BsArrowReturnLeft /></div>
+    <button className='icon-enter' onClick={props.onClick}><BsArrowReturnLeft /></button>
   )
 }
 

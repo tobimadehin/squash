@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Nav.scss";
-import { TextfieldTransparent, Back } from "../../../Components";
+import { Textfield, Back } from "../../../Components";
 
 const Nav = () => {
   return (
@@ -9,7 +9,7 @@ const Nav = () => {
             <Back />
         </div>
         <div className='nav-02'>
-          <TextfieldTransparent width="60%" yTransform="50%" placeholder="Search a message..." textAlign="center" />
+          <Textfield width="60%" yTransform="50%" placeholder="Search a message..." textAlign="center" transparent={true} />
         </div>
         <div className='nav-03'>
             

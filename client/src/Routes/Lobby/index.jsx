@@ -1,12 +1,10 @@
 import React from "react";
 import "./Lobby.scss";
-
+import { Textfield } from "../../Components";
 
 const servers = {
     planets : ["Deuteron", "Axton", "Galacticon", "Capricon"],
 }
-
-
 
 const Lobby = () => {
     return (
@@ -20,7 +18,9 @@ const Lobby = () => {
                     <div>
                         Enter your username
                     </div>
-                    
+                    <div>
+                        <Textfield />
+                    </div>
                 </div>
 
                 <div>

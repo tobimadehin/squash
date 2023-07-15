@@ -1,8 +1,8 @@
 import React from "react";
 import "./InputText.scss";
-import { Plus, Enter, TextfieldTransparent } from "../../../Components";
+import { Plus, Enter, Textfield } from "../../../Components";
 
-const InputText = () => {
+const InputText = (props) => {
     return (
         <div class="div-input-text">
             <div class="div-input-text-box">
@@ -10,10 +10,16 @@ const InputText = () => {
                     <Plus />
                 </div>
                 <div className="div-input-text-box-item2">
-                    <TextfieldTransparent width="100%" />
+                    <Textfield  width="100%" 
+                                value={props.value} 
+                                onChange={props.onChange} 
+                                onKeyDown={props.onKeyDown} 
+                                placeholder="Send a message..." 
+                                transparent={true} 
+                    />
                 </div>
                 <div className="div-input-text-box-item3">
-                    <Enter />
+                    <Enter onClick={props.onClick} />
                 </div>
             </div>
         </div>

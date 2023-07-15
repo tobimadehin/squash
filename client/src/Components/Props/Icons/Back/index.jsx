@@ -4,7 +4,7 @@ import { IoIosArrowBack } from "react-icons/io";
 
 const Back = () => {
   return (
-    <div className='icon-back'><IoIosArrowBack /></div>
+    <button className='icon-back'><IoIosArrowBack /></button>
   )
 }
 
