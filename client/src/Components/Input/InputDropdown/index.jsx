@@ -3,8 +3,8 @@ import "./InputDropdown.scss";
 
 const InputDropdown = () => {
     return (
-        <div class="div-input-dropdown">
-            <input class="input-dropdown-normal" type="dropdown" />
+        <div className="div-input-dropdown">
+            <input className="input-dropdown-normal" type="dropdown" />
         </div>
     )}
 

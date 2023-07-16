@@ -4,8 +4,8 @@ import { Plus, Enter, Textfield } from "../../../Components";
 
 const InputText = (props) => {
     return (
-        <div class="div-input-text">
-            <div class="div-input-text-box">
+        <div className="div-input-text">
+            <div className="div-input-text-box">
                 <div className="div-input-text-box-item1">
                     <Plus />
                 </div>

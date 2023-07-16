@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Back.css";
+import "./Back.scss";
 import { IoIosArrowBack } from "react-icons/io";
 
 const Back = () => {

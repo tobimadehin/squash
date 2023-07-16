@@ -15,7 +15,7 @@ const Textfield = (props) => {
   const onSetCombinedStyle = (style, isTransparent) => {
     isTransparent ? setTransparent(transparentCss) : setTransparent(visibleCss);
     setTransparentBool(isTransparent);
-    style = { ...style, ...{ width: inputWidth } }
+    style = { ...style, ...{ width: inputWidth }}
     setCombinedStyle(style);
   }
   

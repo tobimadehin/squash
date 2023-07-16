@@ -13,7 +13,7 @@ const Main = () => {
     };
     
     return (
-        <div class="div-main">
+        <div className="div-main">
             <div>
                 <Nav /> 
             </div>

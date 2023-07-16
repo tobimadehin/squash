@@ -1,0 +1,35 @@
+body {
+    background-color: var(--grey-second);
+}
+
+.div-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translate(0, 50%);
+    overflow: hidden;
+
+    .div-header-login {
+        font-size: xx-large;
+        font-weight: 900;
+    }
+
+    .div-card-login {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        min-height: 240px;
+        border: solid 1px #ffffff35;
+        border-radius: 6px;
+        justify-content: space-between;
+        padding: 24px;
+        background-color: var(--grey-main);
+        overflow: hidden;
+
+        .div-card-content {
+            overflow: auto;
+        }
+    }
+}
