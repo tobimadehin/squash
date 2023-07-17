@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { TextfieldLabelled, Toggle, Button, Typography } from "../../Components";
+import { TextfieldLabelled, Toggle, Button, Typography, Demarcator } from "../../Components";
 import "./Login.scss";
 
 const Login = () => {
@@ -7,27 +7,22 @@ const Login = () => {
     const [type, setType] = useState("text");
     const [isLoginPassword, setIsLoginPassword] = useState(true);
 
-    const onSetPassword = () => {
-        if (showPassword) {
-            setShowPassword(false);
-            setType("password");
-        }
+    const setPasswordFalse = () => {
+        setShowPassword(false);
+        setType("password");
+    }
 
-        else {
-            setShowPassword(true);
-            setType("text");
-        }
+    const setPasswordTrue = () => {
+        setShowPassword(true);
+        setType("text");
+    }    
+
+    const onSetPassword = () => {
+        showPassword ? setPasswordFalse() : setPasswordTrue()
     } 
 
     const onSetIsPassword = (isPasswordToSet) => {
-        if (isPasswordToSet) {
-            setShowPassword(false);
-            setType("password");
-        }  
-        else {
-            setShowPassword(true);
-            setType("text");
-        } 
+        isPasswordToSet ? setPasswordFalse() : setPasswordTrue()
         setIsLoginPassword(isPasswordToSet);
     }
 
@@ -52,7 +47,8 @@ const Login = () => {
                     />
                     <Toggle label="Show password" onClick={onSetPassword} value={showPassword} />
                     <Button label="Login" type={2} />
-                    <Typography />
+                    <Demarcator label="Don't have an account?" />
+                    <Typography text="Click here to signup" />
                 </div>
             </div>
         </div>

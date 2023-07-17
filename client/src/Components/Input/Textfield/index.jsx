@@ -42,7 +42,8 @@ const Textfield = (props) => {
     <div className='textfield-transparent' style={{ transform: "translate(" + translateX + "," + translateY + ")" }}>
         <input 
           className={`textfield-transparent-input ${textAlign}`}
-          type={props.type} 
+          type={props.type}
+          value={props.value}
           placeholder={placeholder}
           style={combinedStyle}
           onChange={props.onChange}

@@ -33,7 +33,7 @@ const Main = () => {
                                 }
                             }}
                             onKeyDown={(event) => {
-                                if (event.key === 'Enter' && message != "") {
+                                if (event.key == 'Enter' && message != "") {
                                     setMessage("");
                                     renderMessage([...renderable, {
                                         id: renderable.length,

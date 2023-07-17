@@ -3,9 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
-import Main from './Routes/Main';
-import Login from './Routes/Login';
-import _404 from './Routes/_404';
+import { _404, Main, Login } from "../src/Routes";
 
 const router = createBrowserRouter([
   {

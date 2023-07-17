@@ -36,7 +36,7 @@ const TextfieldLabelled = (props) => {
           {label}
       </div>
       <div>
-          <Textfield width={props.width} isPassword={isPassword} type={props.type} placeholder={props.placeholder} />
+          <Textfield width={props.width} isPassword={isPassword} value={props.value} type={props.type} placeholder={props.placeholder} />
       </div>
       <div className='div-helper'>
         {
