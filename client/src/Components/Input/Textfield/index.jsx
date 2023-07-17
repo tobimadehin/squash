@@ -3,6 +3,8 @@ import "./Textfield.scss"
 import { useState, useEffect } from 'react'
 
 const Textfield = (props) => {
+  const [type, setType] = useState(props.type || "text");
+  const [isPassword, setIsPassword] = useState(props.isPassword || false);
   const [inputWidth, setInputWidth] = useState(props.width);
   const [translateX, setX] = useState(props.xTransform || "0%");
   const [translateY, setY] = useState(props.yTransform || "0%");
@@ -25,7 +27,12 @@ const Textfield = (props) => {
     setY(translateY);
     setPlaceholder(placeholder);
     setTextAlign(textAlign);
+    setIsPassword(isPassword);
   }, [])
+
+  useEffect(() => {
+    setType(type);
+  }, [isPassword])
 
   useEffect(() => {
     onSetCombinedStyle(transparent, transparentBool);
@@ -35,10 +42,9 @@ const Textfield = (props) => {
     <div className='textfield-transparent' style={{ transform: "translate(" + translateX + "," + translateY + ")" }}>
         <input 
           className={`textfield-transparent-input ${textAlign}`}
-          value={props.value}
-          type='input' 
+          type={props.type} 
           placeholder={placeholder}
-          style={ combinedStyle }
+          style={combinedStyle}
           onChange={props.onChange}
           onKeyDown={props.onKeyDown}
         />

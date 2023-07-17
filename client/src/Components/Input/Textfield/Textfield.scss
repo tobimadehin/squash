@@ -8,6 +8,13 @@
         height: 90%;
         margin: auto 0;
         font-family: 'Work Sans', sans-serif;
+        outline: 0;
+    }
+
+    input[type=password]::-ms-reveal,
+    input[type=password]::-ms-clear
+    {
+        display: none;
     }
 
     .textfield-transparent-input::placeholder {
