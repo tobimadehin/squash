@@ -13,7 +13,7 @@ const Main = () => {
     };
     
     return (
-        <div class="div-main">
+        <div className="div-main">
             <div>
                 <Nav /> 
             </div>
@@ -33,7 +33,7 @@ const Main = () => {
                                 }
                             }}
                             onKeyDown={(event) => {
-                                if (event.key === 'Enter' && message != "") {
+                                if (event.key == 'Enter' && message != "") {
                                     setMessage("");
                                     renderMessage([...renderable, {
                                         id: renderable.length,

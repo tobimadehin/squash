@@ -1,0 +1,23 @@
+.div-demarcator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    .line-demarcator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 24px;
+        height: auto;
+    }
+
+    .div-demarcator-label {
+        margin-left: 8px;
+        margin-right: 8px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+}
