@@ -9,7 +9,7 @@ const Nav = () => {
             <Back />
         </div>
         <div className='nav-02'>
-          <Textfield width="60%" yTransform="50%" placeholder="Search a message..." textAlign="center" transparent={true} />
+          <Textfield width="60%" yTransform="50%" placeholder="Search a message..." textAlign="center" style="transparent" />
         </div>
         <div className='nav-03'>
             

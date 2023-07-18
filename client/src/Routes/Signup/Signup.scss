@@ -1,0 +1,30 @@
+body {
+    background-color: var(--grey-second);
+}
+
+.div-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+
+    .div-card-signup {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        min-height: 240px;
+        border: solid 1px #ffffff35;
+        border-radius: 6px;
+        justify-content: space-between;
+        padding: 24px;
+        background-color: var(--grey-main);
+        overflow: hidden;
+
+        .div-card-content {
+            overflow: auto;
+        }
+    }
+}

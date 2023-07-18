@@ -18,7 +18,7 @@ const Button = (props) => {
 
   return (
     <div className='div-button'>
-      <button className="button" style={ typeStyle } >{props.label}</button>
+      <button className="button" onClick={props.onClick} style={ typeStyle } >{props.label}</button>
     </div>
   )
 }
