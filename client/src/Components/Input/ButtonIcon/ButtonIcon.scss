@@ -1,0 +1,38 @@
+.div-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    margin-bottom: 16px;
+
+    .button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        border: solid 1px #ffffff35;
+        border-radius: 6px;
+        margin: auto 0;
+        color: #ffffff70;
+        font-family: 'Work Sans', sans-serif;
+
+        .div-button-inner {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 100%;
+
+            .div-button-inner-label {
+                margin-left: 4px;
+            }
+        }
+    }
+
+    .button:hover {
+        border: solid 1px white;
+        color: white;
+    }
+}

@@ -39,6 +39,7 @@ const TextfieldLabelled = (props) => {
         <Textfield  width={props.width} 
                     isPassword={isPassword} 
                     value={props.value} 
+                    onChange={props.onChange}
                     type={props.type} 
                     placeholder={props.placeholder}
                     style={props.style}

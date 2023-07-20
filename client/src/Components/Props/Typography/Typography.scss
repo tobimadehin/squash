@@ -1,3 +1,28 @@
 .Typography {
     margin-bottom: 16px;
+
+    a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+    }
+      
+    a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        cursor: pointer;
+        color: white;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    
+    a:active {
+        color: white;
+        background-color: transparent;
+        text-decoration: underline;
+    }
 }

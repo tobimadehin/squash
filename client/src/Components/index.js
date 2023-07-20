@@ -1,6 +1,7 @@
 export { default as InputDropDown } from "./Input/InputDropdown"
 export { default as InputText } from "./Input/InputText"
 export { default as Button } from "./Input/Button"
+export { default as ButtonIcon } from "./Input/ButtonIcon"
 export { default as MessageCard } from "./Macros/MessageCard"
 export { default as Plus } from "./Props/Icons/Plus"
 export { default as Enter } from "./Props/Icons/Enter"
