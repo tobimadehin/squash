@@ -1,14 +1,50 @@
-.textfield-transparent {
+.textfield {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 32px;
 
-    .textfield-transparent-input {
+    .textfield-input {
         height: 90%;
         margin: auto 0;
         font-family: 'Work Sans', sans-serif;
         outline: 0;
+    }
+
+    .textfield-input-transparent {
+        height: 90%;
+        width: 100%;
+        margin: auto 0;
+        font-family: 'Work Sans', sans-serif;
+        outline: 0;
+        background-color: transparent;
+        border: none;
+        outline: 0;
+        color: white;
+    }
+
+    .textfield-input-visible {
+        height: 90%;
+        width: 100%;
+        margin: auto 0;
+        font-family: 'Work Sans', sans-serif;
+        outline: 0;
+        border: solid 1px #ffffff35;
+        border-radius: 6px;
+        color: white;
+        background-color: #ffffff35;
+    }
+
+    .textfield-input-error {
+        height: 90%;
+        width: 100%;
+        margin: auto 0;
+        font-family: 'Work Sans', sans-serif;
+        outline: 0;
+        border: solid 1px #ff000035;
+        border-radius: 6px; 
+        color: white;
+        background-color: #ff000010;
     }
 
     input[type=password]::-ms-reveal,
@@ -17,7 +53,7 @@
         display: none;
     }
 
-    .textfield-transparent-input::placeholder {
+    .textfield-input::placeholder {
         font-family: 'Work Sans', sans-serif;
     }
 }

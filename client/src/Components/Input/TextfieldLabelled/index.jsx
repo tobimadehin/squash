@@ -6,9 +6,9 @@ const TextfieldLabelled = (props) => {
   const [type, setType] = useState(props.type || "text");
   const [isPassword, setIsPassword] = useState(props.isPassword || false);
   const [label, setLabel] = useState(props.label || "Label");
-  const [helper, setHelper] = useState(props.helper || "Helper");
   const [hasHelperText, setHasHelperText] = useState(props.hasHelperText || false); 
-  const [height, setHeight] = useState("58px"); 
+  const [height, setHeight] = useState("58px");
+  const [error, setError] = useState(props.error || false); 
 
   const onSetHeight = (heightToSet) => {
     hasHelperText ? heightToSet = "78px" : heightToSet = "58px";
@@ -17,14 +17,14 @@ const TextfieldLabelled = (props) => {
 
   useEffect(() => {
     setLabel(label);
-    setHelper(helper);
-    setHasHelperText(hasHelperText);
     setIsPassword(isPassword);
+    setError(error);
+    setHasHelperText(hasHelperText);
   }, []);
 
   useEffect(() => {
     setType(type);
-  }, [isPassword])
+  }, [isPassword]);
 
   useEffect(() => {
     onSetHeight(height);
@@ -36,11 +36,18 @@ const TextfieldLabelled = (props) => {
           {label}
       </div>
       <div>
-          <Textfield width={props.width} isPassword={isPassword} value={props.value} type={props.type} placeholder={props.placeholder} />
+        <Textfield  width={props.width} 
+                    isPassword={isPassword} 
+                    value={props.value} 
+                    onChange={props.onChange}
+                    type={props.type} 
+                    placeholder={props.placeholder}
+                    style={props.style}
+        />
       </div>
       <div className='div-helper'>
         {
-          hasHelperText && helper
+          props.hasHelperText && props.helper
         }
       </div>
     </div>

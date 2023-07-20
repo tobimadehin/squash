@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import "./Button.scss";
+import "./ButtonIcon.scss";
 
-const Button = (props) => {
+const ButtonIcon = (props) => {
   const [label, setLabel] = useState(props.label || "Button");
   const [type, setType] = useState(props.type || 1);
   const [typeStyle, setTypeStyle] = useState(props.typeStyle || style1);
@@ -17,8 +17,13 @@ const Button = (props) => {
   }, []);
 
   return (
-    <div className='div-button'>
-      <button className="button" onClick={props.onClick} style={ typeStyle } >{props.label}</button>
+    <div className='div-button-icon'>
+      <button className="button" onClick={props.onClick} style={ typeStyle } >
+        <div className="div-button-inner">
+          <div>{props.icon}</div>
+          <div className='div-button-inner-label'>{props.label}</div>
+        </div>
+      </button>
     </div>
   )
 }
@@ -31,4 +36,4 @@ const style2 = {
   backgroundColor: "var(--grey-second)"
 }
 
-export default Button
+export default ButtonIcon

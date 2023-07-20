@@ -3,12 +3,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
-import { _404, Main, Login } from "../src/Routes";
+import { _404, Main, Login, Signup } from "../src/Routes";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Login />,
+    errorElement: <_404 />
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
     errorElement: <_404 />
   },
   {

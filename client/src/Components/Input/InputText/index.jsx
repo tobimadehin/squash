@@ -15,7 +15,7 @@ const InputText = (props) => {
                                 onChange={props.onChange} 
                                 onKeyDown={props.onKeyDown} 
                                 placeholder="Send a message..." 
-                                transparent={true} 
+                                style="transparent"
                     />
                 </div>
                 <div className="div-input-text-box-item3">
