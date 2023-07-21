@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { useState } from 'react';
 import './Main.scss';
@@ -19,7 +18,7 @@ const Main = () => {
             </div>
             <div className='div-chat-area'>
                 {renderable.map(item => (
-                    <MessageCard name="Wesley Fox" time={calculateTime()} message={item.text} />
+                    <MessageCard key={item.id} name="Wesley Fox" time={calculateTime()} message={item.text} />
                 ))}
                 <InputText  onChange={handleInputChange}
                             value={message}

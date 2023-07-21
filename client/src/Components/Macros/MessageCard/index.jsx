@@ -1,6 +1,7 @@
 import React from "react";
 import "./MessageCard.scss";
 import { User } from "../../../Components";
+import PropTypes from "prop-types";
 
 const MessageCard = (props) => {
     return (
@@ -19,6 +20,12 @@ const MessageCard = (props) => {
             </div>
         </div>
     );
+}
+
+MessageCard.propTypes = {
+    name: PropTypes.string,
+    time: PropTypes.string,
+    message: PropTypes.string,
 }
 
 export default MessageCard;

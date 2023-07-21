@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './TextfieldLabelled.scss';
 import { Textfield } from "../../../Components";
+import PropTypes from "prop-types";
 
 const TextfieldLabelled = (props) => {
   const [type, setType] = useState(props.type || "text");
@@ -52,6 +53,20 @@ const TextfieldLabelled = (props) => {
       </div>
     </div>
   )
+}
+
+TextfieldLabelled.propTypes = {
+  type: PropTypes.string,
+  isPassword: PropTypes.bool,
+  label: PropTypes.string,
+  hasHelperText: PropTypes.bool,
+  error: PropTypes.bool,
+  width: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  style: PropTypes.string,
+  helper: PropTypes.string,
 }
 
 export default TextfieldLabelled

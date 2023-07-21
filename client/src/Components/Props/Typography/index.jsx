@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Typography.scss";
+import PropTypes from "prop-types";
 
 const Typography = (props) => {
     const [text, setText] = useState(props.text || "Text");
@@ -24,6 +25,15 @@ const Typography = (props) => {
             <a className='link' href={link}>{linkLabel}</a>
         </div>
     )
+}
+
+Typography.propTypes = {
+    text: PropTypes.string,
+    size: PropTypes.string,
+    weight: PropTypes.string,
+    align: PropTypes.string,
+    link: PropTypes.string,
+    linkLabel: PropTypes.string,
 }
 
 export default Typography

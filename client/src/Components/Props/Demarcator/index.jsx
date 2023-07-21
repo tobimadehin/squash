@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Demarcator.scss";
+import PropTypes from "prop-types";
 
 const Demarcator = (props) => {
     const [label, setLabel] = useState(props.label || "label");
@@ -19,6 +20,10 @@ const Demarcator = (props) => {
             </svg>
         </div>
     )
+}
+
+Demarcator.propTypes = {
+    label: PropTypes.string,
 }
 
 export default Demarcator

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Toggle.scss";
 import { IoCheckmark } from "react-icons/io5";
+import PropTypes from "prop-types";
 
 const Toggle = (props) => {
   const [label, setLabel] = useState(props.label || "Label");
@@ -19,6 +20,12 @@ const Toggle = (props) => {
       <div className='div-toggle-label'>{props.label}</div>
     </div>
   )
+}
+
+Toggle.propTypes = {
+  onClick: PropTypes.func,
+  value: PropTypes.string,
+  label: PropTypes.string,
 }
 
 export default Toggle

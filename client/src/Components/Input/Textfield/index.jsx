@@ -1,18 +1,19 @@
 import React from 'react'
 import "./Textfield.scss"
 import { useState, useEffect } from 'react'
+import PropTypes from "prop-types";
 
 const Textfield = (props) => {
   const [type, setType] = useState(props.type || "text");
   const [isPassword, setIsPassword] = useState(props.isPassword || false);
-  const [inputWidth, setInputWidth] = useState(props.width);
+  // const [inputWidth, setInputWidth] = useState(props.width);
   const [translateX, setX] = useState(props.xTransform || "0%");
   const [translateY, setY] = useState(props.yTransform || "0%");
   const [placeholder, setPlaceholder] = useState(props.placeholder || "Input");
   const [textAlign, setTextAlign] = useState(props.textAlign || "left");
 
   useEffect(() => {
-    setInputWidth(inputWidth)
+    // setInputWidth(inputWidth)
     setX(translateX);
     setY(translateY);
     setPlaceholder(placeholder);
@@ -36,6 +37,19 @@ const Textfield = (props) => {
         />
     </div>
   )
+}
+
+Textfield.propTypes = {
+  type: PropTypes.string,
+  isPassword: PropTypes.number,
+  xTransform: PropTypes.string,
+  yTransform: PropTypes.string,
+  placeholder: PropTypes.string,
+  textAlign: PropTypes.string,
+  style: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  onKeyDown: PropTypes.func,
 }
 
 export default Textfield

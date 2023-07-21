@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./ButtonIcon.scss";
+import PropTypes from "prop-types";
 
 const ButtonIcon = (props) => {
   const [label, setLabel] = useState(props.label || "Button");
@@ -7,7 +8,7 @@ const ButtonIcon = (props) => {
   const [typeStyle, setTypeStyle] = useState(props.typeStyle || style1);
 
   const onSetType = (typeToSet) => {
-    typeToSet == 1 ? setTypeStyle(style1) : setTypeStyle(style2);
+    typeToSet === 1 ? setTypeStyle(style1) : setTypeStyle(style2);
     setType(typeToSet);
   } 
 
@@ -34,6 +35,14 @@ const style1 = {
 
 const style2 = {
   backgroundColor: "var(--grey-second)"
+}
+
+ButtonIcon.propTypes = {
+  onClick: PropTypes.func,
+  label: PropTypes.string,
+  icon: PropTypes.string,
+  type: PropTypes.number,
+  typeStyle: PropTypes.object,
 }
 
 export default ButtonIcon

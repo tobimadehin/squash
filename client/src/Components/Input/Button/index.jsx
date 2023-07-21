@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Button.scss";
+import PropTypes from "prop-types";
 
 const Button = (props) => {
   const [label, setLabel] = useState(props.label || "Button");
@@ -29,6 +30,13 @@ const style1 = {
 
 const style2 = {
   backgroundColor: "var(--grey-second)"
+}
+
+Button.propTypes = {
+  label: PropTypes.string,
+  type: PropTypes.number,
+  typeStyle: PropTypes.object,
+  onClick: PropTypes.func,
 }
 
 export default Button
