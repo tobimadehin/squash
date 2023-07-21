@@ -24,7 +24,7 @@ const Toggle = (props) => {
 
 Toggle.propTypes = {
   onClick: PropTypes.func,
-  value: PropTypes.string,
+  value: PropTypes.bool,
   label: PropTypes.string,
 }
 

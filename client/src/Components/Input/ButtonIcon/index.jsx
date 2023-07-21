@@ -40,7 +40,7 @@ const style2 = {
 ButtonIcon.propTypes = {
   onClick: PropTypes.func,
   label: PropTypes.string,
-  icon: PropTypes.string,
+  icon: PropTypes.object,
   type: PropTypes.number,
   typeStyle: PropTypes.object,
 }

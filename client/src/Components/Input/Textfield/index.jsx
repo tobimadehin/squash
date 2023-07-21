@@ -41,7 +41,7 @@ const Textfield = (props) => {
 
 Textfield.propTypes = {
   type: PropTypes.string,
-  isPassword: PropTypes.number,
+  isPassword: PropTypes.bool,
   xTransform: PropTypes.string,
   yTransform: PropTypes.string,
   placeholder: PropTypes.string,
