@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 const Textfield = (props) => {
   const [type, setType] = useState(props.type || "text");
   const [isPassword, setIsPassword] = useState(props.isPassword || false);
-  // const [inputWidth, setInputWidth] = useState(props.width);
+  // const [inputWidth, setInputWidth] = useState(props.width); 
   const [translateX, setX] = useState(props.xTransform || "0%");
   const [translateY, setY] = useState(props.yTransform || "0%");
   const [placeholder, setPlaceholder] = useState(props.placeholder || "Input");
