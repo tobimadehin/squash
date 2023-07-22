@@ -128,7 +128,7 @@ const Signup = () => {
                     <ButtonIcon onClick={signUp} 
                             icon={<BsGoogle />} label="Signup with Google" type={2} />
                     <Demarcator label="Already have an account?" />
-                    <Typography text="Click here to" link="/" linkLabel="login" />
+                    <Typography text="Click here to" link="/login" linkLabel="login" />
                 </div>
             </div>
         </div>
