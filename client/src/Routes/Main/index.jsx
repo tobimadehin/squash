@@ -13,34 +13,36 @@ const Main = () => {
     
     return (
         <div className="div-main">
-            <div>
+            <div className='div-fixed'>
                 <Nav /> 
             </div>
             <div className='div-chat-area'>
                 {renderable.map(item => (
                     <MessageCard key={item.id} name="Wesley Fox" time={calculateTime()} message={item.text} />
                 ))}
+            </div>
+            <div className='div-fixed'>
                 <InputText  onChange={handleInputChange}
-                            value={message}
-                            onClick={() => {
-                                if (message != "") {
-                                    setMessage("");
-                                    renderMessage([...renderable, {
-                                        id: renderable.length,
-                                        text: message
-                                    }]);
-                                }
-                            }}
-                            onKeyDown={(event) => {
-                                if (event.key == 'Enter' && message != "") {
-                                    setMessage("");
-                                    renderMessage([...renderable, {
-                                        id: renderable.length,
-                                        text: message
-                                    }]);
-                                }
-                            }} 
-                        />
+                                value={message}
+                                onClick={() => {
+                                    if (message != "") {
+                                        setMessage("");
+                                        renderMessage([...renderable, {
+                                            id: renderable.length,
+                                            text: message
+                                        }]);
+                                    }
+                                }}
+                                onKeyDown={(event) => {
+                                    if (event.key == 'Enter' && message != "") {
+                                        setMessage("");
+                                        renderMessage([...renderable, {
+                                            id: renderable.length,
+                                            text: message
+                                        }]);
+                                    }
+                                }} 
+                            />
             </div>
         </div>
     );
