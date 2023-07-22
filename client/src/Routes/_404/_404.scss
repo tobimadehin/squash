@@ -3,16 +3,35 @@ body {
 }
 
 .div-main-404 {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     flex-direction: column;
-    margin-top: 25%;
 
-    .div-404 {
-        font-size: xx-large;
-        font-weight: 900;
-    }
-    .div-page-not-found {
-        font-size: large;
+    .div-main-404-content {
+        width: 100vw;
+        height: auto;
+
+        .div-404 {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: xx-large;
+            font-weight: 900;
+        }
+        .div-page-not-found {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: large;
+        }
     }
 }
