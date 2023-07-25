@@ -10,7 +10,7 @@ const Enter = (props) => {
 }
 
 Enter.propTypes = {
-  onClick: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 export default Enter

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { TextfieldLabelled, Toggle, Button, ButtonIcon, Typography, Demarcator } from "../../Components";
 import "./Login.scss";
-import { BsGoogle } from "react-icons/bs";
+import { BsGoogle } from "react-icons/bs"; 
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -58,6 +58,10 @@ const Login = () => {
         console.log(isInValidate ? formData : "Something went wrong!");
     }
 
+    const google = () => {
+        window.open("http://localhost:5000/auth/google", "_self");
+    };
+
     return (
         <div className="div-login">
             <div className="div-card-login">
@@ -83,7 +87,7 @@ const Login = () => {
                     <Toggle label="Show password" onClick={onSetPassword} value={showPassword} />
                     <Button onClick={login} 
                             label="Login" type={2} />
-                    <ButtonIcon onClick={login} 
+                    <ButtonIcon onClick={google} 
                             icon={<BsGoogle />} label="Login with Google" type={2} />
                     <Demarcator label="Don't have an account?" />
                     <Typography text="Click here to" link="/signup" linkLabel="signup"/>
