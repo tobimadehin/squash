@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { TextfieldLabelled, Toggle, Button, ButtonIcon, Typography, Demarcator } from "../../Components";
 import "./Login.scss";
-import { BsGoogle } from "react-icons/bs";
+import { BsGoogle } from "react-icons/bs"; 
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
