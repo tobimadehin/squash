@@ -1,11 +1,11 @@
-.icon-back {
+.icon-new-chat {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 32px;
     height: 32px;
-    border: solid 1px #ffffff35;
+    border: none;
     border-radius: 40px;
     color: white;
     background-color: transparent;
@@ -14,7 +14,7 @@
     -webkit-transition: all .25s ease-in-out;
 }
 
-.icon-back:hover {
+.icon-new-chat:hover {
     color: var(--grey-main);
     background-color: white;
 }

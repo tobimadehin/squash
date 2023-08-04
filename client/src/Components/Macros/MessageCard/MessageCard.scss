@@ -1,55 +1,63 @@
-.div-message {
+.div-message-container {
+    width: 100%;
+    height: auto;
     display: flex;
-    flex-direction: row;
 
-    // Extra small devices (phones, 600px and down)
-    @media only screen and (max-width: 600px) {
-        width: 95vw;
-    }
-    // Small devices (portrait tablets and large phones, 600px and up)
-    @media only screen and (min-width: 600px) {
-        width: 95vw;
-    }
-    // Medium devices (landscape tablets, 768px and up)
-    @media only screen and (min-width: 768px) {
-        width: 95vw;
-    }
-    // Large devices (laptops/desktops, 992px and up)
-    @media only screen and (min-width: 992px) {
-        width: 840px;
-    }
-    // Extra large devices (large laptops and desktops, 1200px and up)
-    @media only screen and (min-width: 1200px) {
-        width: 840px;
-    }
+    .div-message {
+        display: flex;
+        flex-direction: row;
+        margin-top: 24px;
 
-    margin-top: 24px;
+        .div-profile-icon {
+            width: 40px;
+            height: 40px;
+        }
 
-    .div-profile-icon {
-        width: 40px;
-        height: 40px;
-    }
+        .div-text {
+            width: auto;
+            max-width: 400px;
+            height: auto;
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+            align-items: center;
+            justify-content: space-between;
 
-    .div-text {
-        color: white;
-        width: 100%;
-        height: auto;
+            .div-message-info {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 6px;
+                font-size: xx-small;
+                justify-content: space-between;
+            }
 
-        .div-message-info {
-            display: flex;
-            flex-direction: row;
-            margin-left: 12px;
-            margin-bottom: 6px;
-            font-size: xx-small;
-
-            .div-time {
-                margin-left: 12px;
+            .div-card-message {
+                color: white;
             }
         }
-
-        .div-card-message {
-            color: white;
-            margin-left: 12px;
-        }
     }
+}
+
+.message-card-start {
+    background-color: var(--grey-third);
+}
+
+.message-card-end {
+    background-color: var(--secondary2);
+}
+
+.justify-message-container-end {
+    justify-content: end;
+}
+
+.justify-message-container-start {
+    justify-content: start;
+}
+
+.justify-message-end {
+    margin-right: 24px;
+}
+
+.justify-message-start {
+    margin-left: 24px;
 }

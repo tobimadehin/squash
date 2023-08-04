@@ -9,6 +9,7 @@ const Typography = (props) => {
     const [align, setAlign] = useState(props.align, "left");
     const [link, setlink] = useState(props.link || null);
     const [linkLabel, setlinkLabel] = useState(props.linkLabel || null);
+    const [margin, setMargin] = useState(props.margin || "0");
 
     useEffect(() => {
         setSize(size);
@@ -17,10 +18,11 @@ const Typography = (props) => {
         setText(text);
         setlink(link);
         setlinkLabel(linkLabel);
+        setMargin(margin);
     }, []);
 
     return (
-        <div className='Typography' style={{ fontSize: size, fontWeight: weight, textAlign: align }}>
+        <div className='Typography' style={{ fontSize: size, fontWeight: weight, textAlign: align, marginBottom: margin + "px" }}>
             {text} {link !== null && " "}
             <a className='link' href={link}>{linkLabel}</a>
         </div>
@@ -34,6 +36,7 @@ Typography.propTypes = {
     align: PropTypes.string,
     link: PropTypes.string,
     linkLabel: PropTypes.string,
+    margin: PropTypes.number,
 }
 
 export default Typography

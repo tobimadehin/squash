@@ -11,6 +11,7 @@ const Textfield = (props) => {
   const [translateY, setY] = useState(props.yTransform || "0%");
   const [placeholder, setPlaceholder] = useState(props.placeholder || "Input");
   const [textAlign, setTextAlign] = useState(props.textAlign || "left");
+  const [style, setStyle] = useState(props.style || "visible");
 
   useEffect(() => {
     // setInputWidth(inputWidth)
@@ -19,6 +20,7 @@ const Textfield = (props) => {
     setPlaceholder(placeholder);
     setTextAlign(textAlign);
     setIsPassword(isPassword);
+    setStyle(style);
   }, []);
 
   useEffect(() => {
@@ -28,7 +30,7 @@ const Textfield = (props) => {
   return (
     <div className='textfield' style={{ transform: "translate(" + translateX + "," + translateY + ")" }}>
         <input 
-          className={`textfield-input-${props.style}` + " " + `${props.textAlign}`}
+          className={`textfield-input-${style}` + " " + `${props.textAlign}`}
           type={props.type}
           value={props.value}
           placeholder={placeholder}

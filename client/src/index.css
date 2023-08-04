@@ -1,6 +1,10 @@
 :root {
   --grey-main: #09090b;
-  --grey-second: #151517;
+  --grey-second: #141414;
+  --grey-third: #999999;
+  --secondary1: #F4D06F;
+  --secondary2: #1d7874;
+  --red: #FD151B;
 }
 
 body {
@@ -12,8 +16,22 @@ body {
   -ms-overflow-style: none;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #99999950;
+  border-radius: 20px;
 }
 
 code {
