@@ -1,13 +1,19 @@
 import React from 'react'
 import "./Call.scss"
 import { PiPhoneCall } from "react-icons/pi"
+import PropTypes from "prop-types"
 
-const Call = () => {
+const Call = (props) => {
   return (
-    <div className='icon-call'>
+    <button className={`icon-chat ` + `icon-` + `${props.style}`} onClick={props.onClick}>
       <PiPhoneCall />
-    </div>
+    </button>
   )
+}
+
+Call.propTypes = {
+  onClick: PropTypes.func,
+  style: PropTypes.string,
 }
 
 export default Call

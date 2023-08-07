@@ -44,3 +44,15 @@ code {
   height: 100%;
   position: fixed;
 }
+
+.icon-transparent {
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.icon-colored {
+  color: var(--grey-main);
+  background-color: var(--secondary1);
+  border: none;
+}

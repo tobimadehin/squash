@@ -1,13 +1,19 @@
 import React from 'react'
 import "./Group.scss"
 import { HiOutlineUserGroup } from "react-icons/hi"
+import PropTypes from "prop-types"
 
-const Group = () => {
+const Group = (props) => {
   return (
-    <div className='icon-group'>
+    <button className={`icon-chat ` + `icon-` + `${props.style}`} onClick={props.onClick}>
       <HiOutlineUserGroup />
-    </div>
+    </button>
   )
+}
+
+Group.propTypes = {
+  onClick: PropTypes.func,
+  style: PropTypes.string,
 }
 
 export default Group

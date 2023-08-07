@@ -1,13 +1,19 @@
 import React from 'react'
 import "./Settings.scss"
 import { IoSettingsOutline } from "react-icons/io5"
+import PropTypes from "prop-types"
 
-const Settings = () => {
+const Settings = (props) => {
   return (
-    <div className='icon-settings'>
+    <button className={`icon-chat ` + `icon-` + `${props.style}`} onClick={props.onClick}>
       <IoSettingsOutline />
-    </div>
+    </button>
   )
+}
+
+Settings.propTypes = {
+  onClick: PropTypes.func,
+  style: PropTypes.string,
 }
 
 export default Settings
