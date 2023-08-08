@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Logo, Chat, Call, Calender, Group, Settings, User } from "../../"
 import "./Nav.scss";
+import PropTypes from "prop-types";
 
-const Nav = () => {
+const Nav = (props) => {
   const [page, setPage] = useState("chat");
-
   const [chatStyle, setChatStyle] = useState("colored");
   const [callStyle, setCallStyle] = useState("transparent");
   const [calenderStyle, setCalenderStyle] = useState("transparent");
@@ -56,34 +56,45 @@ const Nav = () => {
       setSettingsStyle("colored");
   };
 
+  const onSetPage = () => {
+    props.onSetPage(page);
+  };
+
+  useEffect(() => {
+    onSetPage();
+  }, [page]);
+
   return (
-    <div className='div-main-col-1'>
-      <div className='div-main-col-1-row-1'>
+    <div className='div-nav-col-1'>
+      <div className='div-nav-col-1-row-1'>
         <Logo />
       </div>
-      <div className='div-main-col-1-row-2'>
-          <div className='div-main-col-1-row-2-icon'>
+      <div className='div-nav-col-1-row-2'>
+          <div className='div-nav-col-1-row-2-icon'>
               <Chat onClick={onSetChat} style={chatStyle} />
           </div>
-          <div className='div-main-col-1-row-2-icon'>
+          <div className='div-nav-col-1-row-2-icon'>
               <Call onClick={onSetCall} style={callStyle} />
           </div>
-          <div className='div-main-col-1-row-2-icon'>
+          <div className='div-nav-col-1-row-2-icon'>
               <Calender onClick={onSetCalender} style={calenderStyle} />
           </div>
-          <div className='div-main-col-1-row-2-icon'>
+          <div className='div-nav-col-1-row-2-icon'>
               <Group onClick={onSetGroup} style={groupStyle} />
           </div>
-          <div className='div-main-col-1-row-2-icon'>
+          <div className='div-nav-col-1-row-2-icon'>
               <Settings onClick={onSetSettings} style={settingsStyle} />
           </div>
-          {page}
       </div>
-      <div className='div-main-col-1-row-3'>
+      <div className='div-nav-col-1-row-3'>
           <User />
       </div>
     </div>
   )
+}
+
+Nav.propTypes = {
+  onSetPage: PropTypes.func,
 }
 
 export default Nav

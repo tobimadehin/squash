@@ -4,54 +4,9 @@ body{
     background-color: var(--grey-main);
 }
 
-
-// Fix the contraction
-
 .div-main {
     width: 100vw;
     height: 100vh;
     display: flex;
     background-color: var(--grey-second);
-
-    .div-main-col-1 {
-        width: 100px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--grey-main);
-        // border-right: solid 1px #ffffff35;
-
-        .div-main-col-1-row-1 {
-            width: 100%;
-            height: 30%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 18px;
-        }
-
-        .div-main-col-1-row-2 {
-            width: 100%;
-            height: 40%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-
-            .div-main-col-1-row-2-icon {
-                width: 100%;
-                height: 25%;
-                display: flex;
-            }
-        }
-
-        .div-main-col-1-row-3 {
-            width: 100%;
-            height: 30%;
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-            padding-bottom: 18px;
-        }
-    }
 }

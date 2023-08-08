@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./MessageCard.scss";
-import { User } from "../../../Components";
+import { User } from "../..";
 import PropTypes from "prop-types";
 
 const MessageCard = (props) => {
