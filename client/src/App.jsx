@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from 'react';
 import React from "react";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import { _404, Main, Login, Signup } from "../src/Routes";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { _404, Main, Login, Auth } from "../src/Routes";
 
 const App = () => {
   const user = true;
@@ -38,8 +38,7 @@ const App = () => {
                 <Routes>
                     <Route path='*' element={ <_404 /> } />
                     <Route path='/' element={ user ? <Main /> : <Login /> } />
-                    <Route path='/login' element={ user ? <Navigate to='/'/> : <Login /> } />
-                    <Route path='/signup' element={ <Signup /> } />
+                    <Route path='/auth' element={ <Auth /> } />
                 </Routes>
             </div>
         </BrowserRouter>

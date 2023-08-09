@@ -48,7 +48,7 @@ const style2 = {
 }
 
 const style3 = {
-  backgroundColor: "var(--secondary2)",
+  backgroundColor: "var(--secondary1)",
   border: "none",
 }
 

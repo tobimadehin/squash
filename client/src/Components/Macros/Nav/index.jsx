@@ -21,7 +21,7 @@ const Nav = (props) => {
   };
 
   const onSetCall = () => {
-      setPage("call");
+      // setPage("call");
       setChatStyle("transparent");
       setCallStyle("colored");
       setCalenderStyle("transparent");
@@ -30,7 +30,7 @@ const Nav = (props) => {
   };
 
   const onSetCalender = () => {
-      setPage("calender");
+      // setPage("calender");
       setChatStyle("transparent");
       setCallStyle("transparent");
       setCalenderStyle("colored");
@@ -39,7 +39,7 @@ const Nav = (props) => {
   };
 
   const onSetGroup = () => {
-      setPage("group");
+      // setPage("group");
       setChatStyle("transparent");
       setCallStyle("transparent");
       setCalenderStyle("transparent");
