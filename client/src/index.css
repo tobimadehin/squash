@@ -54,6 +54,6 @@ code {
 
 .icon-colored {
   color: var(--grey-main);
-  background-color: var(--secondary1);
+  background-color: var(--secondary2);
   border: none;
 }
