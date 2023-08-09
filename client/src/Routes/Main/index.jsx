@@ -1,61 +1,20 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './Main.scss';
-import { InputText, Nav, MessageCard } from '../../Components';
+import { ChatPage, CallPage, CalenderPage, GroupPage, SettingsPage, Nav } from '../../Components';
 
 const Main = () => {
-    const [renderable, renderMessage] = useState([]);
-    const [message, setMessage] = useState("");
-    
-    const handleInputChange = (event) => {
-        setMessage(event.target.value);
-    };
-    
+    const [page, setPage] = useState("");
+
     return (
         <div className="div-main">
-            <div className='div-fixed'>
-                <Nav /> 
-            </div>
-            <div className='div-chat-area'>
-                {renderable.map(item => (
-                    <MessageCard key={item.id} name="Wesley Fox" time={calculateTime()} message={item.text} />
-                ))}
-            </div>
-            <div className='div-fixed'>
-                <InputText  onChange={handleInputChange}
-                                value={message}
-                                onClick={() => {
-                                    if (message != "") {
-                                        setMessage("");
-                                        renderMessage([...renderable, {
-                                            id: renderable.length,
-                                            text: message
-                                        }]);
-                                    }
-                                }}
-                                onKeyDown={(event) => {
-                                    if (event.key == 'Enter' && message != "") {
-                                        setMessage("");
-                                        renderMessage([...renderable, {
-                                            id: renderable.length,
-                                            text: message
-                                        }]);
-                                    }
-                                }} 
-                            />
-            </div>
+            <Nav onSetPage={setPage} />
+            { page === "chat" && <ChatPage /> }
+            { page === "call" && <CallPage /> }
+            { page === "calender" && <CalenderPage /> }
+            { page === "group" && <GroupPage /> }
+            { page === "settings" && <SettingsPage /> }
         </div>
     );
-}
-
-const calculateTime = () => {
-    let currentTime = new Date();
-    let hours = currentTime.getHours();
-    let minutes = currentTime.getMinutes();
-    hours = (hours < 10 ? "0" : "") + hours;
-    minutes = (minutes < 10 ? "0" : "") + minutes;
-    const formattedTime = hours + ":" + minutes;
-    return formattedTime;
 }
 
 export default Main;

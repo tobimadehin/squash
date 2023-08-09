@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 32px;
+    height: 36px;
+    width: 100%;
 
     .textfield-input {
         height: 90%;
@@ -29,10 +30,22 @@
         margin: auto 0;
         font-family: 'Work Sans', sans-serif;
         outline: 0;
-        border: solid 1px #ffffff35;
+        border: solid 1px #ffffff15;
         border-radius: 6px;
         color: white;
-        background-color: #ffffff35;
+        background-color: #ffffff10;
+    }
+
+    .textfield-input-black {
+        height: 90%;
+        width: 100%;
+        margin: auto 0;
+        font-family: 'Work Sans', sans-serif;
+        outline: 0;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        background-color: var(--grey-main);
     }
 
     .textfield-input-error {

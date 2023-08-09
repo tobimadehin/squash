@@ -9,6 +9,10 @@
     background-color: #818182;
     color: var(--grey-main);
     border-radius: 6px;
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    
 }
 .icon-enter:hover {
     color: var(--grey-main);

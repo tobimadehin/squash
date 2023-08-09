@@ -1,28 +1,38 @@
 .Typography {
-    margin-bottom: 16px;
-
     a:link {
-        color: white;
+        color: var(--secondary1);
         background-color: transparent;
         text-decoration: none;
     }
       
     a:visited {
-        color: white;
+        color: var(--secondary1);
         background-color: transparent;
         text-decoration: none;
     }
     
     a:hover {
         cursor: pointer;
-        color: white;
+        color: var(--secondary2);
         background-color: transparent;
         text-decoration: underline;
     }
     
     a:active {
-        color: white;
+        color: var(--secondary2);
         background-color: transparent;
         text-decoration: underline;
     }
+}
+
+.white {
+    color: white;
+}
+
+.secondary1 {
+    color: var(--secondary1)
+}
+
+.secondary2 {
+    color: var(--secondary2)
 }

@@ -1,0 +1,63 @@
+.div-message-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    .div-message {
+        display: flex;
+        flex-direction: row;
+        margin-top: 24px;
+
+        .div-profile-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .div-text {
+            width: auto;
+            max-width: 400px;
+            height: auto;
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+            align-items: center;
+            justify-content: space-between;
+
+            .div-message-info {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 6px;
+                font-size: xx-small;
+                justify-content: space-between;
+            }
+
+            .div-card-message {
+                color: white;
+            }
+        }
+    }
+}
+
+.message-card-start {
+    background-color: var(--grey-third);
+}
+
+.message-card-end {
+    background-color: var(--secondary2);
+}
+
+.justify-message-container-end {
+    justify-content: end;
+}
+
+.justify-message-container-start {
+    justify-content: start;
+}
+
+.justify-message-end {
+    margin-right: 24px;
+}
+
+.justify-message-start {
+    margin-left: 24px;
+}

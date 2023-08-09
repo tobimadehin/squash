@@ -4,28 +4,29 @@ import { IoCheckmark } from "react-icons/io5";
 import PropTypes from "prop-types";
 
 const Toggle = (props) => {
-  const [label, setLabel] = useState(props.label || "Label");
+  const [value, setValue] = useState(false);
+
+  const onClick = () => {
+    setValue(!value);
+    props.onToggle();
+  }
 
   useEffect(() => {
-    setLabel(label);
+    setValue(value);
   }, []);
 
   return (
     <div className='div-toggle'>
-      <div className='icon-toggle'
-              onClick={props.onClick}
+      <div className='icon-toggle' onClick={onClick}
       >
-        { props.value && <IoCheckmark /> }
+        { value && <IoCheckmark /> }
       </div>
-      <div className='div-toggle-label'>{props.label}</div>
     </div>
   )
 }
 
 Toggle.propTypes = {
-  onClick: PropTypes.func,
-  value: PropTypes.bool,
-  label: PropTypes.string,
+  onToggle: PropTypes.func,
 }
 
 export default Toggle
