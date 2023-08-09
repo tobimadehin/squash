@@ -65,28 +65,28 @@ const Nav = (props) => {
   }, [page]);
 
   return (
-    <div className='div-nav-col-1'>
-      <div className='div-nav-col-1-row-1'>
+    <div className='div-nav'>
+      <div className='div-nav-row-1'>
         <Logo />
       </div>
-      <div className='div-nav-col-1-row-2'>
-          <div className='div-nav-col-1-row-2-icon'>
+      <div className='div-nav-row-2'>
+          <div className='div-nav-row-2-icon'>
               <Chat onClick={onSetChat} style={chatStyle} />
           </div>
-          <div className='div-nav-col-1-row-2-icon'>
+          <div className='div-nav-row-2-icon'>
               <Call onClick={onSetCall} style={callStyle} />
           </div>
-          <div className='div-nav-col-1-row-2-icon'>
+          <div className='div-nav-row-2-icon'>
               <Calender onClick={onSetCalender} style={calenderStyle} />
           </div>
-          <div className='div-nav-col-1-row-2-icon'>
+          <div className='div-nav-row-2-icon'>
               <Group onClick={onSetGroup} style={groupStyle} />
           </div>
-          <div className='div-nav-col-1-row-2-icon'>
+          <div className='div-nav-row-2-icon'>
               <Settings onClick={onSetSettings} style={settingsStyle} />
           </div>
       </div>
-      <div className='div-nav-col-1-row-3'>
+      <div className='div-nav-row-3'>
           <User />
       </div>
     </div>

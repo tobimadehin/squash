@@ -1,9 +1,9 @@
 :root {
   --grey-main: #09090b;
   --grey-second: #141414;
-  --grey-third: #999999;
-  --secondary1: #F4D06F;
-  --secondary2: #1d7874;
+  --grey-third: hsl(0, 0%, 60%);
+  --secondary1: #d7c8ed;
+  --secondary2: #7678ED;
   --red: #FD151B;
 }
 

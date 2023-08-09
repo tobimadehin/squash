@@ -1,53 +1,23 @@
 .div-input-text {
     display: flex;
-    flex-direction: column;
-
-    // Extra small devices (phones, 600px and down)
-    @media only screen and (max-width: 600px) {
-        width: 95vw;
-    }
-    // Small devices (portrait tablets and large phones, 600px and up)
-    @media only screen and (min-width: 600px) {
-        width: 95vw;
-    }
-    // Medium devices (landscape tablets, 768px and up)
-    @media only screen and (min-width: 768px) {
-        width: 95vw;
-    }
-    // Large devices (laptops/desktops, 992px and up)
-    @media only screen and (min-width: 992px) {
-        width: 100%;
-    }
-    // Extra large devices (large laptops and desktops, 1200px and up)
-    @media only screen and (min-width: 1200px) {
-        width: 100%;
-    }
-
-    height: 96px;
-    background-color: var(--grey-main);
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 8px 0px 8px;
+    height: 64px;
+    width: 100%;
     border: solid 1px #ffffff35;
-    border-radius: 16px;
+    border-radius: 8px;
 
-    .div-input-text-box {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 16px 16px 0px 16px;
-        height: 64px;
-        border: solid 1px #ffffff35;
-        border-radius: 8px;
-
-        .div-input-text-box-item1 {
-            margin-left: 16px;
-        }
-        .div-input-text-box-item2 {
-            width: 100%;
-            height: 32px;
-            margin: 0px 8px 0px 8px;
-        }
-        .div-input-text-box-item3 {
-            margin-right: 16px;
-            color: var(--grey-main);
-        }
+    .div-input-text-item1 {
+        margin-left: 16px;
+    }
+    .div-input-text-item2 {
+        width: 100%;
+        height: 32px;
+        margin: 0px 8px 0px 8px;
+    }
+    .div-input-text-item3 {
+        margin-right: 16px;
+        color: var(--grey-main);
     }
 }
