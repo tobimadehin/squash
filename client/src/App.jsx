@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from 'react';
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { _404, Main, Login, Auth } from "../src/Routes";
+import { _404, Main, Auth } from "../src/Routes";
 
 const App = () => {
   const user = true;
@@ -37,8 +37,7 @@ const App = () => {
             <div>
                 <Routes>
                     <Route path='*' element={ <_404 /> } />
-                    <Route path='/' element={ user ? <Main /> : <Login /> } />
-                    <Route path='/auth' element={ <Auth /> } />
+                    <Route path='/' element={ user ? <Main /> : <Auth /> } />
                 </Routes>
             </div>
         </BrowserRouter>
