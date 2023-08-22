@@ -69,6 +69,15 @@
             height: auto;
             flex-direction: column;
 
+            .div-card-auth-content-error {
+                display: flex;
+                width: auto;
+                height: auto;
+                margin-top: 24px;
+                font-size: small;
+                color: var(--red);
+            }
+
             .div-card-auth-content-top {
                 display: flex;
                 width: auto;

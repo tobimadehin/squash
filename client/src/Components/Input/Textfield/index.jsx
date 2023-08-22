@@ -31,17 +31,20 @@ const Textfield = (props) => {
     <div className='textfield' style={{ transform: "translate(" + translateX + "," + translateY + ")" }}>
         <input 
           className={`textfield-input-${style}` + " " + `${props.textAlign}`}
+          name={props.name}
           type={props.type}
           value={props.value}
           placeholder={placeholder}
           onChange={props.onChange}
           onKeyDown={props.onKeyDown}
+          required
         />
     </div>
   )
 }
 
 Textfield.propTypes = {
+  name: PropTypes.string,
   type: PropTypes.string,
   isPassword: PropTypes.bool,
   xTransform: PropTypes.string,

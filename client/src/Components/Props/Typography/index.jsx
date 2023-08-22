@@ -9,7 +9,6 @@ const Typography = (props) => {
     const [weight, setWeight] = useState(props.weight || "lighter");
     const [align, setAlign] = useState(props.align, "left");
     const [link, setlink] = useState(props.link || "#");
-    const [linkLabel, setlinkLabel] = useState(props.linkLabel || null);
     const [margin, setMargin] = useState(props.margin || "0");
 
     useEffect(() => {
@@ -19,7 +18,6 @@ const Typography = (props) => {
         setAlign(align);
         // setText(() => text==="" ? "Text" : props.text);
         setlink(link);
-        setlinkLabel(linkLabel);
         setMargin(margin);
     }, []);
 
@@ -29,15 +27,14 @@ const Typography = (props) => {
 
     return (
         <div className={`Typography ${color}`} style={{ fontSize: size, fontWeight: weight, textAlign: align, marginBottom: margin + "px" }}>
-            {props.text} {link !== null && " "}
-            <a className='link' href={link} onClick={() => { props.onClick(); return false; }}>{linkLabel}</a>
+            {props.text}
+            <a className='link' href={link} onClick={() => { props.onClick(); return false; }}>{props.linkLabel}</a>
         </div>
     )
 }
 
 Typography.propTypes = {
     text: PropTypes.string,
-    textState: PropTypes.any,
     size: PropTypes.string,
     color: PropTypes.string,
     weight: PropTypes.string,

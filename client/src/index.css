@@ -4,7 +4,7 @@
   --grey-third: hsl(0, 0%, 60%);
   --secondary1: #7678ED;
   --secondary2: #d7c8ed;
-  --red: #FD151B;
+  --red: rgb(253, 21, 27);
 }
 
 body {
