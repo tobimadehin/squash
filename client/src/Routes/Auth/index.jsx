@@ -27,6 +27,7 @@ const Auth = () => {
 
     const onSetIsLogin = () => {
         setIsLogin(!isLogin);
+        setError("");
     }
 
     const handleChange = (e) => {
