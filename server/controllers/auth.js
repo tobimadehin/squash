@@ -42,15 +42,15 @@ export const login = async (req, res) => {
         const chatClient = StreamChat.getInstance(api_key, api_secret);
         const { users } = await chatClient.queryUsers({ email: { $eq: email } });
 
-        if (!users.length) return res.status(400).json({ message: 'User not found' });
+        if (!users.length) return res.status(400).json({ message: 'Username or password is incorrect!' });
         
         const success = await bcrypt.compare(password, users[0].hashedPassword);
         const feedToken = await feedClient.createUserToken(users[0].id);
         const chatToken = await chatClient.createToken(users[0].id);
 
         success ?
-        await console.log(res.status(200).json({ feedToken, chatToken, userId: users[0].id, fullName: users[0].fullName, email})) :
-        res.status(500).json({ message: 'Incorrect password' });
+        await res.status(200).json({ feedToken, chatToken, userId: users[0].id, fullName: users[0].fullName, email}) :
+        res.status(500).json({ message: 'Username or password is incorrect!' });
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: error });   

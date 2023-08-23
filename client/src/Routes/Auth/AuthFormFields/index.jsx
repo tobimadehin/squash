@@ -28,6 +28,7 @@ const AuthFormFields = (props) => {
                             style={props.style}
                             type={props.type}
                             value={props.value}
+                            disabled={props.disabled}
                         />
                     </div>
                 </>
@@ -47,6 +48,7 @@ const AuthFormFields = (props) => {
                                     onChange={props.onChange1}
                                     style={props.style}
                                     value1={props.value1}
+                                    disabled={props.disabled}
                                 />
                             </div>
                         </div>
@@ -61,6 +63,7 @@ const AuthFormFields = (props) => {
                                     onChange={props.onChange2}
                                     style={props.style}
                                     value2={props.value2}
+                                    disabled={props.disabled}
                                 />
                             </div>
                         </div>
@@ -91,6 +94,7 @@ AuthFormFields.propTypes = {
     name: PropTypes.string,
     name1: PropTypes.string,
     name2: PropTypes.string,
+    disabled: PropTypes.bool,
 }
 
 export default AuthFormFields

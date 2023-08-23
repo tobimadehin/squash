@@ -37,6 +37,7 @@ const Textfield = (props) => {
           placeholder={placeholder}
           onChange={props.onChange}
           onKeyDown={props.onKeyDown}
+          disabled={props.disabled}
           required
         />
     </div>
@@ -55,6 +56,7 @@ Textfield.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
   onKeyDown: PropTypes.func,
+  disabled: PropTypes.bool,
 }
 
 export default Textfield
