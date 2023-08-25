@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { _404, Main, Auth } from "../src/Routes";
+import { _404, EmailVerification, Auth } from "../src/Routes";
 import { StreamChat } from "stream-chat";
 import Cookies from "universal-cookie";
 
@@ -25,7 +25,7 @@ const App = () => {
             <div>
                 <Routes>
                     <Route path='*' element={ <_404 /> } />
-                    <Route path='/' element={ authToken ? <Main /> : <Auth /> } />
+                    <Route path='/' element={ authToken ? <EmailVerification /> : <Auth /> } />
                 </Routes>
             </div>
         </BrowserRouter>

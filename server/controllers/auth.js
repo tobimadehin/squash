@@ -13,22 +13,32 @@ const app_id = process.env.STREAM_APP_ID;
 
 export const signup = async (req, res) => {
     try {
-        const { fullName, email, password } = req.body;
+        const { fullName, email, username, password } = req.body;
         const userId = crypto.randomBytes(16).toString('hex');
         const feedClient = connect(api_key, api_secret, app_id);
         const chatClient = StreamChat.getInstance(api_key, api_secret);
         const hashedPassword = await bcrypt.hash(password, 10);
+        const isEmailVerified = false;
+
+        const { users } = await chatClient.queryUsers({
+            $or: [{ email: { $eq: email }}, { username: { $eq: username }}]
+        });
+
+        if (users.length) return res.status(400).json({ message: 'This user already exists!' });
+
         chatClient.upsertUser({
             id: userId,
             fullName,
             email,
+            username,
             hashedPassword,
+            isEmailVerified,
         });
-    
+
         const feedToken = feedClient.createUserToken(userId);
         const chatToken = chatClient.createToken(userId);
     
-        res.status(200).json({ feedToken, chatToken, userId, fullName, email });
+        res.status(200).json({ feedToken, chatToken, userId, fullName, username, email, isEmailVerified });
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: error });   
@@ -49,7 +59,8 @@ export const login = async (req, res) => {
         const chatToken = await chatClient.createToken(users[0].id);
 
         success ?
-        await res.status(200).json({ feedToken, chatToken, userId: users[0].id, fullName: users[0].fullName, email}) :
+        await res.status(200).json({ feedToken, chatToken, userId: users[0].id, 
+                                    fullName: users[0].fullName, email, isEmailVerified: users[0].isEmailVerified }) :
         res.status(500).json({ message: 'Username or password is incorrect!' });
     } catch (error) {
         console.error(error);

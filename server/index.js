@@ -19,9 +19,11 @@ app.get('/', (req, res) => {
 
 app.use("/auth", router);
 
-mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => functions.logger.info("Squash server is running!"))
-  .catch((error) => functions.logger.error(error, "Did not connect!"));
+// mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+//   .then(() => functions.logger.info("Squash server is running!"))
+//   .catch((error) => functions.logger.error(error, "Did not connect!"));
+
+functions.logger.info("Squash server is running!")
 
 // Fix the authorization later on...
 export const squash = functions.runWith({invoker: "public"}).https.onRequest(app);
