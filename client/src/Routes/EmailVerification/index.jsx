@@ -1,20 +1,47 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import "./EmailVerification.scss"
 import "../Auth/Auth.scss"
-import { Typography, Textfield } from '../../Components'
+import { Typography } from '../../Components'
 
 const EmailVerification = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const numInputs = 6;
+  const [otpValues, setOtpValues] = useState(Array(numInputs).fill(''));
+  const inputRefs = useRef([]);
+  const otpValuesComplete = otpValues.every(value => value !== "");
 
   useEffect(() => {
     setIsLoading(isLoading);
   }, []);
 
-  const handleSubmit = () => {
+  useEffect(() => {
+    handleSubmit();
+  }, [otpValuesComplete, !isLoading]);
 
+  const handleSubmit = () => {
+    // e.preventDefault();
+    if (otpValuesComplete) {
+      console.log('OTP Values as a string:', otpValues.join(''));
+    }
   }
 
-  const handleChange = () => {
+  if (otpValuesComplete) {
+    console.log("otpValues:", otpValues.join(""));
+  }
+
+  const handleChange = (index, value) => {
+    if (value.match(/^[0-9]$/)) {
+      const newOtpValues = [...otpValues];
+      newOtpValues[index] = value;
+      setOtpValues(newOtpValues);
+
+      if (index < numInputs - 1) {
+        inputRefs.current[index + 1].focus();
+      }
+    }
+  };
+
+  const sendCode = () => {
 
   }
 
@@ -30,56 +57,23 @@ const EmailVerification = () => {
           </div>
           <form onClick={handleSubmit}>
             <div className="div-verification-input-container">
-              <div className="div-verification-input">
-                <Textfield  name="text"
-                            placeholder=" "
-                            onChange={handleChange}
-                            type="email"
-                            disabled={isLoading}
-                />
-              </div>
-              <div className="div-verification-input">
-                <Textfield  name="text"
-                            placeholder=" "
-                            onChange={handleChange}
-                            type="email"
-                            disabled={isLoading}
-                />
-              </div>
-              <div className="div-verification-input">
-                <Textfield  name="text"
-                            placeholder=" "
-                            onChange={handleChange}
-                            type="email"
-                            disabled={isLoading}
-                />
-              </div>
-              <div className="div-verification-input">
-                <Textfield  name="text"
-                            placeholder=" "
-                            onChange={handleChange}
-                            type="email"
-                            disabled={isLoading}
-                />
-              </div>
-              <div className="div-verification-input">
-                <Textfield  name="text"
-                            placeholder=" "
-                            onChange={handleChange}
-                            type="email"
-                            disabled={isLoading}
-                />
-              </div>
-              <div className="div-verification-input">
-                <Textfield  name="text"
-                            placeholder=" "
-                            onChange={handleChange}
-                            type="email"
-                            disabled={isLoading}
-                />
-              </div>
+              {
+                otpValues.map((value, index) => (
+                  <input  className="div-verification-input"
+                          key={index}
+                          type="text"
+                          maxLength="1"
+                          value={value}
+                          onChange={(e) => handleChange(index, e.target.value)}
+                          ref={(el) => (inputRefs.current[index] = el)} // Save reference to input element
+                  />
+                ))
+              }
             </div>
           </form>
+          <div className="div-verification-line-item">
+            <Typography text="Didn't get code? " onClick={sendCode} linkLabel="Resend" size="small" weight="bolder" />
+          </div>
         </div>
       </div>
     </div>
