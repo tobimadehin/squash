@@ -1,13 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { _404, EmailVerification, Auth } from "../src/Routes";
+import { _404, Main, Auth } from "../src/Routes";
 import { StreamChat } from "stream-chat";
 import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 const api_key = process.env.REACT_APP_STREAM_API_KEY;
 const authToken = cookies.get("token");
-
 const client = StreamChat.getInstance(api_key);
 
 if (authToken) {
@@ -25,7 +24,7 @@ const App = () => {
             <div>
                 <Routes>
                     <Route path='*' element={ <_404 /> } />
-                    <Route path='/' element={ authToken ? <EmailVerification /> : <Auth /> } />
+                    <Route path='/' element={ authToken ? <Main /> : <Auth /> } />
                 </Routes>
             </div>
         </BrowserRouter>

@@ -46,7 +46,7 @@ const ChatArea = () => {
                         <InputText  onChange={handleInputChange}
                                     value={message}
                                     onClick={() => {
-                                        if (message != "") {
+                                        if (message !== "") {
                                             setMessage("");
                                             renderMessage([...renderable, {
                                                 id: renderable.length,
@@ -55,7 +55,7 @@ const ChatArea = () => {
                                         }
                                     }}
                                     onKeyDown={(event) => {
-                                        if (event.key == 'Enter' && message != "") {
+                                        if (event.key === 'Enter' && message !== "") {
                                             setMessage("");
                                             renderMessage([...renderable, {
                                                 id: renderable.length,

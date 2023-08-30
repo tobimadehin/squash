@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import Cookies from 'universal-cookie';
 import axios from 'axios';
@@ -75,13 +74,10 @@ const Auth = () => {
             cookies.set('token', token);
             cookies.set('userId', userId);
             cookies.set('hashedPassword', hashedPassword);
-    
-            if (!isLogin) {
-                cookies.set('fullName', fullName);
-                cookies.set('email', email);
-                cookies.set('username', username);
-            }
-
+            cookies.set('fullName', fullName);
+            cookies.set('email', email);
+            cookies.set('username', username);
+            
             window.location.reload();
         } catch (error) {
             setError(error.response.data.message);
@@ -116,7 +112,7 @@ const Auth = () => {
                         regStage === 1 &&
                         <form onSubmit={handleSubmit}>
                             {
-                                error != "" &&
+                                error !== "" &&
                                 <div className="div-card-auth-content-error">
                                     {error}
                                 </div>
