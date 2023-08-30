@@ -3,7 +3,6 @@ import "./Button.scss";
 import PropTypes from "prop-types";
 
 const Button = (props) => {
-  // const [label, setLabel] = useState(props.label || "Button");
   const [type, setType] = useState(props.type || 1);
   const [typeStyle, setTypeStyle] = useState(props.typeStyle || style1);
 
@@ -27,12 +26,24 @@ const Button = (props) => {
 
   useEffect(() => {
     onSetType(type);
-    // setLabel(label);
   }, []);
 
   return (
     <div className='div-button'>
-      <button className="button" onClick={props.onClick} style={ typeStyle }>{props.label}</button>
+      <button className="button" onClick={props.onClick} style={typeStyle} disabled={props.isLoading}>
+        <div className="div-button-inner">
+          {
+            props.isLoading ? 
+            <>
+              <span className="loader"></span>
+            </> :
+            <>
+              <span>{props.icon}</span>
+              <span className='div-button-inner-label'>{props.label}</span>
+            </>
+          }
+        </div>
+      </button>
     </div>
   )
 }
@@ -54,9 +65,11 @@ const style3 = {
 
 Button.propTypes = {
   label: PropTypes.string,
+  icon: PropTypes.object,
   type: PropTypes.number,
   typeStyle: PropTypes.object,
   onClick: PropTypes.func,
+  isLoading: PropTypes.bool,
 }
 
 export default Button

@@ -22,10 +22,13 @@ const AuthFormFields = (props) => {
                     </div>
                     <div className='div-auth-form-field-row'>
                         <Textfield
+                            name={props.name}
                             placeholder={props.placeholder}
-                            onChange={() => props.onChange()}
+                            onChange={props.onChange}
                             style={props.style}
                             type={props.type}
+                            value={props.value}
+                            disabled={props.disabled}
                         />
                     </div>
                 </>
@@ -40,9 +43,12 @@ const AuthFormFields = (props) => {
                             </div>
                             <div className='div-auth-form-field-row'>
                                 <Textfield
+                                    name={props.name1}
                                     placeholder={props.placeholder1}
-                                    onChange={() => props.onChange1()}
+                                    onChange={props.onChange1}
                                     style={props.style}
+                                    value1={props.value1}
+                                    disabled={props.disabled}
                                 />
                             </div>
                         </div>
@@ -52,9 +58,12 @@ const AuthFormFields = (props) => {
                             </div>
                             <div className='div-auth-form-field-row'>
                                 <Textfield
+                                    name={props.name2}
                                     placeholder={props.placeholder2}
-                                    onChange={() => props.onChange2()}
+                                    onChange={props.onChange2}
                                     style={props.style}
+                                    value2={props.value2}
+                                    disabled={props.disabled}
                                 />
                             </div>
                         </div>
@@ -66,19 +75,26 @@ const AuthFormFields = (props) => {
 }
 
 AuthFormFields.propTypes = {
-    label: PropTypes.label,
-    helper: PropTypes.helper,
+    label: PropTypes.string,
+    helper: PropTypes.string,
     placeholder: PropTypes.string,
     onChange: PropTypes.func,
     style: PropTypes.string,
     formType: PropTypes.string,
     type: PropTypes.string,
-    label1: PropTypes.label,
+    label1: PropTypes.string,
     placeholder1: PropTypes.string,
     onChange1: PropTypes.func,
-    label2: PropTypes.label,
+    label2: PropTypes.string,
     placeholder2: PropTypes.string,
     onChange2: PropTypes.func,
+    value: PropTypes.string,
+    value1: PropTypes.string,
+    value2: PropTypes.string,
+    name: PropTypes.string,
+    name1: PropTypes.string,
+    name2: PropTypes.string,
+    disabled: PropTypes.bool,
 }
 
 export default AuthFormFields

@@ -1,10 +1,24 @@
 import React from 'react'
 import "./SettingsPage.scss"
+import Cookies from 'universal-cookie';
 import { Typography, User, Button, SettingsProfileOptions } from "../../"
+
+const cookies = new Cookies();
 
 const SettingsPage = () => {
   const toggleDarkMode = () => {
     
+  }
+
+  const logout = () => {
+    cookies.remove("token");
+    cookies.remove("userId"),
+    cookies.remove("fullName"),
+    cookies.remove("username"),
+    cookies.remove("hashedPassword"),
+    cookies.remove("email");
+
+    window.location.reload();
   }
 
   return (
@@ -42,7 +56,7 @@ const SettingsPage = () => {
           <SettingsProfileOptions label="DARK MODE" type="no-value" controller="toggle" onToggle={toggleDarkMode} />
           <div className='div-settings-button-col'>
             <div className='div-settings-button'>
-              <Button label="Logout" type={1} />
+              <Button label="Logout" type={1} onClick={logout} />
             </div>
           </div>
         </div>
