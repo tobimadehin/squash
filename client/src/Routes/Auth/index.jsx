@@ -52,7 +52,7 @@ const Auth = () => {
     }
 
     const auth = async () => {
-        const URL = "http://127.0.0.1:5001/squash-io/us-central1/squash/auth";
+        const URL = "https://us-central1-squash-io.cloudfunctions.net/squash/auth";
         const { email, username, password } = form;
     
         const requestData = isLogin ? 

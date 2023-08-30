@@ -53,7 +53,7 @@ const EmailVerification = () => {
   };
 
   const sendCode = async () => {
-    const URL = "http://127.0.0.1:5001/squash-io/us-central1/squash/auth";
+    const URL = "https://us-central1-squash-io.cloudfunctions.net/squash/auth";
 
     try {
       setOtpValues(Array(numInputs).fill(''));
@@ -68,7 +68,7 @@ const EmailVerification = () => {
   }
 
   const verify = async () => {
-    const URL = "http://127.0.0.1:5001/squash-io/us-central1/squash/auth";
+    const URL = "https://us-central1-squash-io.cloudfunctions.net/squash/auth";
 
     try {
       const otp = parseInt(otpValues.join(""));
