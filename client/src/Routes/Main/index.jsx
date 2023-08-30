@@ -17,7 +17,7 @@ const Main = () => {
     }, []);
 
     const checkVerificationStatus = async () => {
-        const URL = "https://us-central1-squash-io.cloudfunctions.net/squash/auth";
+        const URL = "http://127.0.0.1:5001/squash-io/us-central1/squash/auth";
 
         try {
             const email = cookies.get('email');
